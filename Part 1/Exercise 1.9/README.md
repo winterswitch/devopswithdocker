@@ -1,1 +1,1 @@
-![volume bind](https://github.com/winterswitch/devopswithdocker/assets/171403848/aa1f7786-6d08-4729-b4d4-8e0a59ff2240?raw=true)
+![binding output](https://github.com/winterswitch/devopswithdocker/assets/171403848/101c152f-8f6d-46af-972b-1338cda70667?raw=true)
