@@ -5,4 +5,4 @@ From another terminal enter:\
 sudo docker exec -it [container name] bash\
 apt update\
 apt upgrade\
-apt install -y curl\
+apt install -y curl
