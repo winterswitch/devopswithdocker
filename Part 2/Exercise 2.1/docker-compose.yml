@@ -1,0 +1,6 @@
+name: simple-web-service
+services:
+  simple-web-service:
+    image: devopsdockeruh/simple-web-service:alpine
+    volumes:
+      -  ./text.log:/usr/src/app/text.log
