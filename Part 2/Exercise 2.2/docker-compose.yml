@@ -1,1 +1,9 @@
-
+name: simple_web-service
+services:
+  simple-web-service:
+    image: devopsdockeruh/simple-web-service
+    volumes:
+      - ./text.log:/usr/src/app/text.log
+    ports:
+      - 8000:8000
+    command: server
