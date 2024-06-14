@@ -1,1 +1,1 @@
-
+sudo docker comnpose up
