@@ -1,1 +1,19 @@
-
+name: web-application
+services:
+  e-frontend:
+    image: e-frontend
+    ports:
+      - 5000:5000
+    container_name: frontend
+ e-backend:
+   image: e-backend
+   ports:
+     - 5000:5000
+   environment:
+     - REDIS_HOST=redis_server
+   container_name: backend
+redis_server:
+  image: redis:alpine
+  restart: unless-stopped
+  container_name: redis_server
+  
