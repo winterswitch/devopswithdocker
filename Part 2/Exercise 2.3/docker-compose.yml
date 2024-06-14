@@ -1,1 +1,12 @@
-
+name: web-application
+services:
+  e-frontend:
+    image: e-frontend
+    ports:
+      - 5000:5000
+    container_name: frontend
+ e-backend:
+   image: e-backend
+   ports:
+     - 5000:5000
+     container_name: backend
