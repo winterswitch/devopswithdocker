@@ -9,4 +9,4 @@ services:
    image: e-backend
    ports:
      - 5000:5000
-     container_name: backend
+   container_name: backend
