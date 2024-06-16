@@ -1,1 +1,1 @@
-Removed ports from e-frontedn and e-backend in the docker-compose.yml file
+Removed ports from e-frontend and e-backend in the docker-compose.yml file
