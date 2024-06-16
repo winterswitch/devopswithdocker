@@ -1,1 +1,37 @@
-
+name: web-application
+services: 
+  e-frontend:
+    image: e-frontend
+    ports:
+      - 5000:5000
+    container_name: frontend
+  e-backend:
+    image: e-backend
+    ports:
+      - 8080:8080
+    environments:
+      - REDIS_HOST=redis_server
+      - POSTGRES_HOST=postgres_server
+    container_name: backend
+  redis_server:
+    image:  redis:alpine
+    restart: unless-stopped
+    container_name: redis_server
+  postgres_server:
+    image: postgres:13.2-alpine
+    restart: unless-stopped
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./database:/var/lib/postgresql/data
+    container_name: postgres_server
+  nginx_proxy:
+    image: nginx:alpine
+    restart: unless-stopped
+    environment:
+      - NGINX_PORT=80
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    container_name: nginx_proxy
